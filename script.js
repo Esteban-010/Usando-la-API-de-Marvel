@@ -1,6 +1,7 @@
 const btn_I = document.getElementById("btn-Ironman")
 const btn_C = document.getElementById("btn-Cap")
 const btn_H = document.getElementById("btn-Hulk")
+const cont = document.getElementById("contenido")
 
 /*DATOS PRIVADOS:
 Please dont hack me ;) */
@@ -20,7 +21,23 @@ const urls = {
     url_CapitanAmerica,
     url_Hulk
 }
-    
+
+const draw = json => {
+    cont.innerHTML = ""
+    const div = document.createElement("div")
+    json.forEach(comic => {
+        const cont_html = `
+                <div>
+                    <h2>${comic.name}</h2>
+                    <p>${comic.description}</p>
+                    <img src = "${comic.thumbnail.path}/standard_fantastic.${comic.thumbnail.extension}" alt="${comic.nombre}">
+                </div>
+            `
+        div.insertAdjacentHTML("beforeend", cont_html)
+    });
+    cont.appendChild(div)
+}
+
 const showHero = async (url) => {
     const response = await fetch(url)
     console.log(response)
@@ -28,6 +45,7 @@ const showHero = async (url) => {
         case 200:
             const response2 =  await response.json()
             console.log(response2.data.results)
+            draw(response2.data.results)
             break
         case 404:
             console.log("Not Found")
