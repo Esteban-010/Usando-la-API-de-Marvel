@@ -4,17 +4,39 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
         <title>Marvel</title>
     </head>
     <body>
-        <h1 id="tittle">Hero's Marvel</h1>
-        <button id="btn-Ironman">IroMan</button>
-        <button id="btn-Cap">Capitan América</button>
-        <button id="btn-Hulk">Hulk</button>
-
         <div>
-            <div id="contenido"></div>
+            <h1 id="tittle">HERO'S MARVEL</h1>
+            <button class="btn" id="btn-Inicio"> Inicio</button>
+            <button class="btn" id="btn-Ironman">IroMan</button>
+            <button class="btn" id="btn-Cap">Capitan América</button>
+            <button class="btn" id="btn-Hulk">Hulk</button>
         </div>
+        
+
+        <div id="main">
+            <div style="display: none;" id="loading">CARGANDO...</div>
+            <div id="contenido-inicial">
+                <h2>Contenido inicial:</h2>
+                <p>
+                    Bienvenido al inicio de esta prueba con la API
+                    de Marvel, usando la tecnolgía AJAX para hacer
+                    peticiones http. Disculpar el estilo de la págino,
+                    pero solo es algo superfluo lo que me importa en este
+                    proyecto es el js.
+
+                    Luego vere como arreglarle el style.css, de momento la 
+                    lógica del script.js está justo como quiero.
+                    FIN.
+                </p>
+            </div>
+
+        </div>
+        <footer><a href="#">esteban.blocked@gmail.com</a></footer>
         <script src="script.js"></script>
     </body>
 </html>
