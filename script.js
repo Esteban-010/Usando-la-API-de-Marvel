@@ -25,9 +25,10 @@ const urls = {
 const draw = json => {
     cont.innerHTML = ""
     const div = document.createElement("div")
+    div.id = "todosComics"
     json.forEach(comic => {
         const cont_html = `
-                <div>
+                <div id="comic">
                     <h2>${comic.name}</h2>
                     <p>${comic.description}</p>
                     <img src = "${comic.thumbnail.path}/standard_fantastic.${comic.thumbnail.extension}" alt="${comic.nombre}">
@@ -59,5 +60,3 @@ const showHero = async (url) => {
 btn_I.addEventListener("click", () => showHero(urls.url_IronMan))
 btn_C.addEventListener("click", () => showHero(urls.url_CapitanAmerica))
 btn_H.addEventListener("click", () => showHero(urls.url_Hulk))
-
-
