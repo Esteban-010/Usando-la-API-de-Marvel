@@ -39,7 +39,7 @@ const showHero = async (url) => {
 }
 
 btn_I.addEventListener("click", () => showHero(urls.url_IronMan))
-btn_C.addEventListener("click", () => {showHero(urls.url_CapitanAmerica)})
-btn_H.addEventListener("click", () => {showHero(urls.url_Hulk)})
+btn_C.addEventListener("click", () => showHero(urls.url_CapitanAmerica))
+btn_H.addEventListener("click", () => showHero(urls.url_Hulk))
 
 
