@@ -1,7 +1,9 @@
 const btn_I = document.getElementById("btn-Ironman")
 const btn_C = document.getElementById("btn-Cap")
 const btn_H = document.getElementById("btn-Hulk")
-const cont = document.getElementById("contenido")
+const btn_inicio = document.getElementById("btn-Inicio")
+const main = document.getElementById("main")
+const cont_inicial = document.getElementById("contenido-inicial")
 
 /*DATOS PRIVADOS:
 Please dont hack me ;) */
@@ -21,11 +23,13 @@ const urls = {
     url_CapitanAmerica,
     url_Hulk
 }
-
+//Solo borrar el hijo de main "todosComics si ya se ha dibujado, es decir, borrar = true"
+let borrar = false
 const draw = json => {
-    cont.innerHTML = ""
+    
     const div = document.createElement("div")
     div.id = "todosComics"
+    div.innerHTML = "<p>Comics: </p>"
     json.forEach(comic => {
         const cont_html = `
                 <div id="comic">
@@ -36,11 +40,19 @@ const draw = json => {
             `
         div.insertAdjacentHTML("beforeend", cont_html)
     });
-    cont.appendChild(div)
+    main.appendChild(div)
+    borrar = true
 }
 
 const showHero = async (url) => {
+    cont_inicial.style.display = "none"
+    loading.style.display = "block"
+    if(borrar){
+        main.removeChild(todosComics)
+    }
     const response = await fetch(url)
+    loading.style.display = "none"
+    
     console.log(response)
     switch(response.status){
         case 200:
@@ -60,3 +72,7 @@ const showHero = async (url) => {
 btn_I.addEventListener("click", () => showHero(urls.url_IronMan))
 btn_C.addEventListener("click", () => showHero(urls.url_CapitanAmerica))
 btn_H.addEventListener("click", () => showHero(urls.url_Hulk))
+btn_inicio.addEventListener("click", () => {
+    cont_inicial.style.display = "block"
+    todosComics.style.display = "none"
+})
