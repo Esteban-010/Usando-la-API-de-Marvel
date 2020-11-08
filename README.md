@@ -1,6 +1,6 @@
 ## LA API DE MARVEL
 
-Trayendo algunos _JSON_ de la *Api de Marvel*
+Trayendo algunos _JSON_ de la **Api de Marvel**
 
 Héroes usados:
 1. Iron Man
