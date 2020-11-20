@@ -1,6 +1,9 @@
+//Buttons
 const btn_I = document.getElementById("btn-Ironman")
 const btn_C = document.getElementById("btn-Cap")
 const btn_H = document.getElementById("btn-Hulk")
+const btn_T = document.getElementById("btn-Thor")
+
 const btn_inicio = document.getElementById("btn-Inicio")
 const main = document.getElementById("main")
 const cont_inicial = document.getElementById("contenido-inicial")
