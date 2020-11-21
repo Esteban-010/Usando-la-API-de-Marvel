@@ -10,15 +10,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 /**Asumiremos que nunca tomaran el valor de null y solo le declaramos como "HTMLElement" */
-const btn_I = document.getElementById("btn-Ironman");
-const btn_C = document.getElementById("btn-Cap");
-const btn_H = document.getElementById("btn-Hulk");
-const btn_T = document.getElementById("btn-Thor");
-const btn_inicio = document.getElementById("btn-Inicio");
+const btn_I = document.getElementById("link-i");
+const btn_C = document.getElementById("link-c");
+const btn_H = document.getElementById("link-h");
+const btn_T = document.getElementById("link-t");
+const btn_inicio = document.getElementById("link-I");
 const main = document.getElementById("main");
 const cont_inicial = document.getElementById("contenido-inicial");
 const loading = document.getElementById("loading");
-const barras = document.getElementById("imgBarras");
+// const barras: HTMLImageElement = document.getElementById("imgBarras");
 /*DATOS PRIVADOS:
 Please dont hack me ;) */
 const hash = "2f5bee855d54cd50792a5ee5765c93c5";
@@ -38,13 +38,20 @@ let borrar = false;
 const draw = (json) => {
     const div = document.createElement("div");
     div.id = "todosComics";
+    div.className = "todosComics";
     div.innerHTML = "<p>Comics: </p>";
     json.forEach((comic) => {
         const cont_html = `
-                <div id="comic">
-                    <h2>${comic.name}</h2>
-                    <p>${comic.description}</p>
-                    <img src = "${comic.thumbnail.path}/standard_fantastic.${comic.thumbnail.extension}" alt="${comic.nombre}">
+                <div id="comic" class="comic">
+                    <h2 class="tittle-comic">${comic.name}</h2>
+                    <div class="content-comic">
+                        <p>${comic.description}</p>
+                        <nav class="img-comic">
+                            <img src = "${comic.thumbnail.path}/standard_fantastic.${comic.thumbnail.extension}" alt="${comic.nombre}">
+                        </nav>
+                        
+                    </div>
+                    
                 </div>
             `;
         div.insertAdjacentHTML("beforeend", cont_html);
@@ -53,6 +60,7 @@ const draw = (json) => {
     borrar = true;
 };
 const showHero = (url) => __awaiter(void 0, void 0, void 0, function* () {
+    /**Quitamos el contenido inicial */
     cont_inicial.style.display = "none";
     loading.style.display = "block";
     if (borrar) {
@@ -81,13 +89,4 @@ btn_T.addEventListener("click", () => showHero(urls.url_Thor));
 btn_inicio.addEventListener("click", () => {
     cont_inicial.style.display = "block";
     todosComics.style.display = "none";
-});
-//Menú desplegable
-const buttons = document.getElementById("buttons");
-barras.addEventListener("mouseover", () => {
-    buttons.style.left = "0";
-    buttons.style.transition = ".5s";
-});
-buttons.addEventListener("mouseout", () => {
-    buttons.style.left = "-262px";
 });

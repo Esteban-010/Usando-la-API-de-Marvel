@@ -5,25 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arimo:ital@1&display=swap" rel="stylesheet"> 
         <title>Marvel</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-
-        <div class="menu">
-            <div class="img-menu">
-                <img src="img/barras-menu.png" alt="menu" id= "imgBarras" class="img-barras">
-            </div>      
-    
-            <div id="buttons" class="buttons">
-                
-                <button class="btn" id="btn-Inicio"> Inicio</button>
-                <button class="btn" id="btn-Ironman">IroMan</button>
-                <button class="btn" id="btn-Cap">Capitan América</button>
-                <button class="btn" id="btn-Hulk">Hulk</button>
-                <button class="btn" id="btn-Thor">Thor</button>
-            </div>
-        </div>
 
         <div class="div-head">
             <div class="head">
@@ -31,21 +20,49 @@
             </div>
         </div> 
 
+  
+            <div  class="menu">
+
+                
+                <ul class="menu-links">
+                    <li><a href="#" id="link-I">Inicio</a></li>
+                    <li><a href="#" id="link-A">Avengers</a>
+                    <ul id="none-click">
+                        <li><a href="#" id="link-i">Iron Man</a></li>
+                        <li><a href="#" id="link-c">Capitan América</a></li>
+                        <li><a href="#" id="link-h">Hulk</a></li>
+                        <li><a href="#" id="link-t">Thor</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#" id="link-ITEM">Item desconocido</a></li>
+                </ul>
+
+            </div>
+
         <div id="main">
             <div style="display: none;" id="loading">CARGANDO...</div>
-            <div id="contenido-inicial" class="cont_ini">
-                <h2>Contenido inicial:</h2>
-                <p>
-                    Bienvenido al inicio de esta prueba con la API
-                    de Marvel, usando la tecnolgía AJAX para hacer
-                    peticiones http. Disculpar el estilo de la págino,
-                    pero solo es algo superfluo lo que me importa en este
-                    proyecto es el js.
 
-                    Luego vere como arreglarle el style.css, de momento la 
-                    lógica del script.js está justo como quiero.
-                    FIN.
-                </p>
+            <div id="contenido-inicial" class="contenido-inicial">
+
+                <div class="txt-inicio">
+                    <h2>Contenido inicial:</h2>
+                    <p>
+                        Bienvenido al inicio de esta prueba con la API
+                        de Marvel, usando la tecnolgía AJAX para hacer
+                        peticiones http. Disculpar el estilo de la págino,
+                        pero solo es algo superfluo lo que me importa en este
+                        proyecto es el js.
+
+                        Luego vere como arreglarle el style.css, de momento la 
+                        lógica del script.js está justo como quiero.
+                        FIN.
+                    </p>
+                </div>
+                
+                <span class="fondo-inicio">
+                    <img class="img-inicio" src="img/ironman-txt.jpg" alt="fondo-inicio">
+                </span>
+                
             </div>
 
         </div>
