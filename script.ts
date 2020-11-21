@@ -1,4 +1,4 @@
-//Buttons¿
+//Buttons
 
 /**Asumiremos que nunca tomaran el valor de null y solo le declaramos como "HTMLElement" */
 const btn_I: HTMLButtonElement = document.getElementById("btn-Ironman");
@@ -10,7 +10,7 @@ const btn_inicio: HTMLButtonElement = document.getElementById("btn-Inicio");
 const main: HTMLDivElement  = document.getElementById("main");
 const cont_inicial: HTMLDivElement = document.getElementById("contenido-inicial");
 const loading: HTMLDivElement = document.getElementById("loading");
-
+const barras: HTMLImageElement = document.getElementById("imgBarras");
 
 
 /*DATOS PRIVADOS:
@@ -70,6 +70,7 @@ const showHero = async (url: string) => {
             const response2 =  await response.json()
             console.log(response2.data.results)
             draw(response2.data.results)
+            
             break
         case 404:
             console.log("Not Found")
@@ -89,3 +90,12 @@ btn_inicio.addEventListener("click", () => {
     todosComics.style.display = "none"
 })
 
+//Menú desplegable
+const buttons:HTMLDivElement = document.getElementById("buttons");
+barras.addEventListener("mouseover", () => {
+    buttons.style.left = "0";
+    buttons.style.transition = ".5s";
+})
+buttons.addEventListener("mouseout", () => {
+    buttons.style.left = "-262px";
+})

@@ -34,16 +34,54 @@
 
 
 .buttons {
-    border: 1px solid red;
-    padding-top: 100px;
+    background: rgb(44, 44, 44);
+    width: 330px;
+    height: 100%;
+
+    padding-top: 55px;
+    
+
+    position: absolute;
+    top: 0;
+    z-index: 30;
+    left: -262px;
     
 }
 .btn {
-    margin: 5px;
+    display: block;
+    width: 250px;
+    
+    border-bottom: 1px solid black;
     padding: 10px;
-        
+    margin: 10px 10px;
+    margin-right: 60px;
+       
+}
+.btn:hover {
+    background: rgba(0, 0, 0, 0.486);
+    color: white;
 }
 
+.img-menu {
+    
+    width: 35px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+
+    position: absolute;
+    top: 0;
+    z-index: 35;
+}
+.img-barras {
+    display: block;
+    max-width: 35px;
+    height: auto;
+}
+
+.img-barras:hover .buttons{
+    background: red;
+}
 
 #logo {
     width: 10px;
@@ -67,9 +105,6 @@ div {
     transform: translateX(-50%);
 }
 
-
-
-
 .cont_ini, #loading {
     text-align: center;
     width: 700px;
@@ -77,4 +112,8 @@ div {
     position: relative;
     right: -50%;
     transform: translateX(-50%);
+}
+
+.footer {
+    text-align: center;
 }
