@@ -10,6 +10,8 @@ Héroes usados:
 
 ##### Nota:
 El CSS sigue siendo paupérrimo :s
+##### Nota2:
+Ignorar el css mejor xd
 
 
 ##### Skills:
