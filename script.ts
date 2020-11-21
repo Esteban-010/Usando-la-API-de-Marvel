@@ -10,7 +10,7 @@ const btn_inicio: HTMLButtonElement = document.getElementById("btn-Inicio");
 const main: HTMLDivElement  = document.getElementById("main");
 const cont_inicial: HTMLDivElement = document.getElementById("contenido-inicial");
 const loading: HTMLDivElement = document.getElementById("loading");
-const barras: HTMLImageElement = document.getElementById("imgBarras");
+// const barras: HTMLImageElement = document.getElementById("imgBarras");
 
 
 /*DATOS PRIVADOS:
@@ -92,10 +92,14 @@ btn_inicio.addEventListener("click", () => {
 
 //Menú desplegable
 const buttons:HTMLDivElement = document.getElementById("buttons");
-barras.addEventListener("mouseover", () => {
-    buttons.style.left = "0";
-    buttons.style.transition = ".5s";
-})
+// barras.addEventListener("mouseover", () => {
+//     buttons.style.left = "0";
+//     buttons.style.transition = ".5s";
+// })
 buttons.addEventListener("mouseout", () => {
     buttons.style.left = "-262px";
 })
+
+const irons: HTMLLinkElement = document.getElementById("irons");
+
+irons.addEventListener("click", () => showHero(urls.url_IronMan))
