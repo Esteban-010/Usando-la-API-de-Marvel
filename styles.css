@@ -1,19 +1,50 @@
 * {
+    margin: 0;
     padding: 0px;
 }
 
-#tittle {
+
+.head {
+    background: rgb(24, 24, 24);
+    
+    width: 100%;
+    height: 100px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.tittle {
     font-family: 'Anton', sans-serif;
     font-size: 2.5em;
     text-align: center;
     color: white;
     background: red;
+
     width: 290px;
     height: 60px;
+    margin: 15px ;
+
     position: relative;
     right: -50%;
     transform: translateX(-50%);
 }
+
+
+.buttons {
+    border: 1px solid red;
+    padding-top: 100px;
+    
+}
+.btn {
+    margin: 5px;
+    padding: 10px;
+        
+}
+
+
 #logo {
     width: 10px;
 }
@@ -28,6 +59,7 @@ div {
     text-align: center;
     border: 1px blue dashed;
     margin: 10px;
+    padding: 10px;
     width: 500px;
     height: 500px;
     position: relative;
@@ -35,13 +67,13 @@ div {
     transform: translateX(-50%);
 }
 
-.btn {
-    margin: 5px;
-}
 
-#contenido-inicial, #loading {
+
+
+.cont_ini, #loading {
     text-align: center;
     width: 700px;
+    padding: 200px;
     position: relative;
     right: -50%;
     transform: translateX(-50%);

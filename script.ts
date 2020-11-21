@@ -1,4 +1,4 @@
-//Buttons
+//Buttons¿
 
 /**Asumiremos que nunca tomaran el valor de null y solo le declaramos como "HTMLElement" */
 const btn_I: HTMLButtonElement = document.getElementById("btn-Ironman");
